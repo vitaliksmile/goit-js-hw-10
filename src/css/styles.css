@@ -11,6 +11,10 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+.country-list {
+  list-style: none;
+  padding: 0;
+}
 
 #search-box {
   font: inherit;
