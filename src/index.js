@@ -19,7 +19,7 @@ function rendSorgQvary() {
   const inputValue = refs.sorgQvary.value.trim();
   clierCountry();
   if (inputValue !== '') {
-    fetchCountries(inputValue).then(checkResolve);
+    fetchCountries(inputValue).then(checkResolve).catch(err);
   }
 }
 
@@ -68,4 +68,7 @@ function renderOneCountry(countries) {
     })
     .join('');
   refs.countryList.innerHTML = markup;
+}
+function err() {
+  Notify.failure('Oops, there is no country with that name');
 }
